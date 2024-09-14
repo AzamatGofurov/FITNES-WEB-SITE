@@ -1,0 +1,912 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+
+.background {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background-image 0.5s ease-in-out; /* Transition for background image */
+}
+    
+    /* Other CSS rules remain unchanged */
+    
+/* Other existing styles... */
+
+/* Other existing styles... */
+
+/* Other existing styles... */
+
+#background {
+    opacity: 0;
+    animation: backgroundFadeIn 2.5s ease-in-out forwards;
+}
+
+@keyframes backgroundFadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* GYM OR FITNESS title */
+#hero-title {
+    opacity: 0;
+    visibility: hidden; /* Ko'rinmas holatga keltiramiz */
+    transform: scale(1.2);
+    animation: titleFadeIn 2s ease-in-out forwards 2s;
+}
+
+@keyframes titleFadeIn {
+    0% {
+        opacity: 0;
+        visibility: visible; /* Animatsiya boshlanishi bilan ko'rinadi */
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+/* The Best Multipurpose One Page Template in Market subtitle */
+#hero-subtitle {
+    opacity: 0;
+    visibility: hidden; /* Ko'rinmas holatga keltiramiz */
+    transform: translateY(20px);
+    animation: subtitleFadeIn 2s ease-in-out forwards 3s;
+}
+
+@keyframes subtitleFadeIn {
+    0% {
+        opacity: 0;
+        visibility: visible; /* Animatsiya boshlanishi bilan ko'rinadi */
+        transform: translateY(20px);
+    }
+    
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+/* Learn More Button */
+#hero-button {
+    opacity: 0;
+    visibility: hidden; /* Ko'rinmas holatga keltiramiz */
+    transform: translateY(50px);
+    animation: buttonFadeIn 2s ease-in-out forwards 4s;
+}
+
+@keyframes buttonFadeIn {
+    0% {
+        
+        opacity: 0;
+        visibility: visible; /* Animatsiya boshlanishi bilan ko'rinadi */
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+/* Other existing styles... */
+
+/* GYM OR FITNESS title */
+#hero-title {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.hidden-title {
+    opacity: 0;
+    transform: translateY(50px); /* Pastga kirib ketish animatsiyasi */
+}
+
+/* The Best Multipurpose One Page Template in Market subtitle */
+#hero-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.hidden-subtitle {
+    opacity: 0;
+    transform: translateY(50px); /* Pastga kirib ketish animatsiyasi */
+}
+
+/* Learn More Button */
+#hero-button {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.hidden-button {
+    opacity: 0;
+    transform: translateY(50px); /* Pastga kirib ketish animatsiyasi */
+}
+
+/* Background transition */
+#background {
+    transition: background-image 1s ease-in-out;
+}
+
+
+
+/* Navbar */
+.navbar {
+    
+    padding: 15px 20px;
+    position: sticky;
+    width: 100%;
+    top: 0px -30px;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    color: blue;
+    font-size: 36px;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+}
+.logo span{
+    color: #fff;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px ;
+    white-space: nowrap;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: border-bottom 1s;
+}
+
+.navbar nav ul li a:hover {
+    color: #64dd17;
+    border-bottom: 3px solid #64dd17;
+}
+
+/* Hamburger Menu for small screens */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    position: relative;
+    top: -35px;
+    left: 250px;
+    transition: all 0.5s;
+
+}
+
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        background: #04822a;
+        position: absolute;
+        top: -10px; /* Just below the navbar */
+        right: 0px;
+        width: 400px;
+        padding: 10px;
+        padding-right: 100px;
+        border-radius: 80px 10px;
+    }
+
+    .navbar nav ul.show {
+        display: flex;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar .logo {
+        margin: 0 auto;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+.dot-buttons {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+   
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #f3ebeb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: red;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.hero-section h2 {
+    font-size: 5rem;
+    margin-bottom: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: serif, monospace;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #fff8;
+    font-weight: 400;
+    font-family: serif;
+
+
+}
+
+.hero-section .btn {
+    position: relative;
+    top: 30px;
+    background-color: #64dd17;
+    color: #0a0a0a;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 80px 80px;
+    font-family: serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background: none;
+    color: #64dd17;
+    border: 1.5px solid #64dd17;
+    box-sizing: border-box;
+}
+
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    background: #fff;
+    text-align: center;
+}
+
+
+.about-section .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about-section .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.about-section .about-box {
+    flex-basis: 100%;
+    max-width: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+
+
+.about-section .about-box h3 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.about-box i img {
+    width: 40%;
+    border-radius: 50px 50px;
+    background-color: #777;
+}
+
+.about-box span {
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    height: 2px;
+    background-color: #0a0a0a;
+}
+
+.about-section .about-box p {
+    margin-top: 10px;
+    color: #777;
+}
+
+.about-box:hover,
+.about-box img:hover {
+   color: #64dd17;
+   cursor: pointer;
+}
+.about-box:hover span{
+    background-color: #64dd17;
+}
+.about-box:hover i>img{
+    background-color: #64dd17;
+}
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stats .stat-item {
+    flex-basis: 100%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom:20px;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+.stat-item1 {
+    background-color: #64dd17;
+}
+.stat-item2{
+    background-color: #70d830;
+}
+.stat-item3{
+    background-color: #84d751;
+}
+.stat-item4{
+    background-color: #99d872;
+}
+.stats .stat-item h4 {
+    font-size: 2rem;
+    color: white;
+    font-family: cursive;
+    
+}
+
+.stats .stat-item p {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: serif;
+}
+
+/* Coaches Section CSS */
+.coaches-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.coaches-section h3 {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.coaches-section h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.coaches-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow to show only 3 coaches */
+    max-width: 100%; /* Adjust the width to display only 3 coaches */
+    margin: 0 auto;
+}
+
+.coaches-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.coach {
+    min-width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+}
+
+.coach img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.coach:hover img {
+    transform: scale(1.05);
+}
+
+.coach h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.coach p {
+    margin-top: 5px;
+    color: #777;
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent button interaction when hidden */
+}
+
+.arrow-btn:hover {
+    background: #64dd17;
+}
+
+.left-arrow {
+    left: -150px; /* Position close to the coach section */
+}
+
+.right-arrow {
+    right: -150px; /* Position close to the coach section */
+}
+
+/* Show arrows when hovering on coaches slider */
+.coach:hover ~ .left-arrow,
+.coach:hover ~ .right-arrow,
+.coaches-slider:hover ~ .left-arrow,
+.coaches-slider:hover ~ .right-arrow {
+    opacity: 1;
+    pointer-events: auto; /* Enable button interaction */
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent button interaction when hidden */
+}
+
+.arrow-btn:hover {
+    background: #64dd17;
+}
+
+.left-arrow {
+    left: 10px; /* Close to the coach div */
+}
+
+.right-arrow {
+    right: 10px; /* Close to the coach div */
+}
+
+/* Show arrows when hovering on coaches slider */
+.coach:hover ~ .left-arrow,
+.coach:hover ~ .right-arrow,
+.coaches-slider:hover ~ .left-arrow,
+.coaches-slider:hover ~ .right-arrow {
+    opacity: 1;
+    pointer-events: auto; /* Enable button interaction */
+}
+
+
+/* Arrow Buttons */
+.arrow-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.arrow-btn:hover {
+    background: #64dd17;
+}
+
+.left-arrow {
+    left: -20px;
+}
+
+.right-arrow {
+    right: -20px;
+}
+
+
+/* Blog Section CSS */
+.blog-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.blog-section .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    gap: 20px;
+}
+
+.blog-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.blog-content h4 {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.blog-content h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-content .btn.blog-btn {
+    display: inline-block;
+    background-color: #64dd17;
+    color: #fff;
+    border: 1.5px solid #64dd17;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-content .btn.blog-btn:hover {
+    background-color: #fff;
+    color: #64dd17;
+    border: 1.5px solid #64dd17;
+}
+
+.blog-image {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden; /* Image overflow hidden */
+    position: relative;
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Adding smooth transition */
+}
+
+.blog-image:hover img {
+    transform: translateX(-20px); /* Move left when hovered */
+}
+
+
+/* Happy Clients Section CSS */
+.happy-clients-section {
+    background: url(../images/home1.png) no-repeat center center/cover;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.happy-clients-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5); /* Adding dark overlay */
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.happy-clients-content h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.happy-clients-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.happy-clients-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.happy-clients-content .client-info {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.happy-clients-content .stars {
+    color: #ffd700; /* Star color */
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+/* Personal Training Section CSS */
+.personal-training-section {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.personal-training-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.personal-training-section h4 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.personal-training-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.personal-training-section p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.personal-training-section .btn.training-btn {
+    display: inline-block;
+    background-color: #64dd17;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    border: 1.5px solid #64dd17;
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.personal-training-section .btn.training-btn:hover {
+    background-color: #fff;
+    color: #64dd17;
+    border: 1.5px solid #64dd17;
+}
+
+/* Footer Section CSS */
+.footer-section {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-container .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-container .social-links li {
+    margin: 0 10px;
+}
+
+.footer-container .social-links li a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-container .social-links li a:hover {
+    color: #64dd17;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .about-section .about-content,
+    .stats,
+    .team-section .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section .about-box,
+    .stats .stat-item,
+    .team-section .team-member {
+        max-width: 100%;
+    }
+}
+
+
+/* Animatsiya boshlanish holati */
+.animate {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+/* Animatsiya qo'llangandan keyingi holat */
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

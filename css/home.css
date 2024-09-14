@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(16, 129, 114);
+}
+
+.header__section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main__section a {
+    font-family: monospace;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    color: aliceblue;
+}
+.main__section a:hover {
+    color: yellowgreen;
+}
