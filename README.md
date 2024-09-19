@@ -1,0 +1,4 @@
+## Texnologiyalar
+- HTML
+- CSS
+- JavaScript
